@@ -1,0 +1,14 @@
+---
+- name: add file and write inside a file
+  hosts: localhost
+  tasks:
+    - name: add file
+      file:
+        path: /tmp/new.txt
+        state: touch
+    - name: add lines inside a file
+      blockinfile:
+        path: /tmp/new.txt
+        block: |
+          hello
+          hello1
