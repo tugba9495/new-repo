@@ -1,0 +1,10 @@
+---
+  - name: configure /etc/selinux/config
+    hosts: localhost
+    tasks:
+      - name: configure /etc/selinux/config
+        lineinfile:
+          path: /etc/selinux/config
+          regexp: "^SELINUX="
+          line: SELINUX=disabled
+
