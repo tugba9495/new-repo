@@ -12,3 +12,11 @@
         block: |
           hello
           hello1
+    - name: install apache
+      yum:
+        name: httpd
+    - name: start and enable apche
+      systemd:
+        name: httpd
+        state: started
+        enabled: true
