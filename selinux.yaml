@@ -8,3 +8,6 @@
           regexp: "^SELINUX="
           line: SELINUX=disabled
 
+      - name: reboot server
+        command: reboot
+
