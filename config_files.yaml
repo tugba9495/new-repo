@@ -1,0 +1,22 @@
+---
+  - name: add lines to file
+    hosts: localhost
+    tasks:
+      - name: add file
+        file:
+          path: /root/test_config1
+          state: touch
+          mode: u=rw,g=rw,o=rw
+
+      - name: add file
+        file:
+          path: /root/test_config2
+          state: touch
+          mode: u=rw,g=rw,o=rw
+
+
+      
+        
+            
+            
+            
